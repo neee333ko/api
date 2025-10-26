@@ -10,7 +10,7 @@ import (
 )
 
 type User struct {
-	metav1.ObjectMeta `json:",inline"`
+	metav1.ObjectMeta `json:"metadata,inline"`
 	Status            int `json:"status" gorm:"column:status" validate:"omitempty"`
 	// required
 	Nickname string `json:"nickname" gorm:"column:nickname" validate:"required"`

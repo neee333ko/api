@@ -13,7 +13,7 @@ type AuthzPolicy struct {
 }
 
 type Policy struct {
-	metav1.ObjectMeta `json:",inline"`
+	metav1.ObjectMeta `json:"metadata,inline"`
 	Username          string      `json:"username" gorm:"username" validate:"omitempty"`
 	Policy            AuthzPolicy `json:"policy" gorm:"-" validate:"omitempty"`
 	PolicyShadow      string      `json:"policyShadow" gorm:"column:policy_shadow" validate:"omitempty"`

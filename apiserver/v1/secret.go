@@ -7,7 +7,7 @@ import (
 )
 
 type Secret struct {
-	metav1.ObjectMeta `json:",inline"`
+	metav1.ObjectMeta `json:"metadata,inline"`
 	Username          string `json:"username" gorm:"column:username" validate:"omitempty"`
 	SecretID          string `json:"secretID" gorm:"column:secret-id" validate:"omitempty"`
 	SecretKey         string `json:"secretKey" gorm:"column:secret-key" validate:"omitempty"`
