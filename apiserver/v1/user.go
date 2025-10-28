@@ -17,7 +17,7 @@ type User struct {
 	// required
 	Password string `json:"password" gorm:"column:password" validate:"required"`
 	// required
-	Email       string    `json:"email" gorm:"column:email" validate:"required;email;min=1;max=30"`
+	Email       string    `json:"email" gorm:"column:email" validate:"required,email,min=1,max=30"`
 	Phone       string    `json:"phone,omitempty" gorm:"column:phone" validate:"omitempty"`
 	IsAdmin     int       `json:"isAdmin,omitempty" gorm:"column:isAdmin" validate:"omitempty"`
 	TotalPolicy int64     `json:"totalPolicy" gorm:"column:total_policy" validate:"omitempty"`
